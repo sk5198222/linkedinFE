@@ -1,12 +1,87 @@
-# React + Vite
+# 💼 LinkedIn Clone – Frontend (React + Tailwind CSS)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, responsive LinkedIn clone with real-time post feeds, user authentication, and interactive UI components.
 
-Currently, two official plugins are available:
+## 🌐 Live Demo
+Frontend: [https://mini-linked-in-assignment.netlify.app/](https://mini-linked-in-assignment.netlify.app/)
+Backend: [https://linkedinbackend-a38l.onrender.com/api/posts](https://linkedinbackend-a38l.onrender.com/api/posts)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🔥 Features
+- **User Authentication** (Login/Register with JWT)
+- **Post Feed** (Create/View posts)
+- **Profile Section** (User details)
+- **NewsSideBar** (Trending articles)
+- **ProfileSidebar** (User suggestions)
+- **Fully Responsive** (Mobile, Tablet, Desktop)
 
-## Expanding the ESLint configuration
+## 🛠 Tech Stack
+- **Frontend**: React.js (Vite)
+- **Styling**: Tailwind CSS
+- **State Management**: React Context API, UseStates
+- **Routing**: React Router DOM
+- **HTTP Client**: Axios
+- **Icons**: React Icons, Luicide Icons
+- **Backend**: [Node.js/Express API](https://github.com/sk5198222/linkedInBE)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🚀 Quick Start
+1. Clone the repo:
+```bash
+git clone https://github.com/sk5198222/linkedinFE.git
+cd linkedinFE
+```
+
+2. Install dependencies:
+```bash
+npm install
+```
+
+3. Create `.env` file:
+```env
+VITE_API_BASE_URL=https://your-backend.onrender.com
+```
+
+4. Start development server:
+```bash
+npm run dev
+```
+
+## 📂 Project Structure
+```
+linkedinFE/
+├── src/
+│   ├── assets/            # Images & logos
+│   ├── components/        # Reusable components
+│   │   ├── NewsSideBar/   # Trending news section
+│   │   ├── ProfileSidebar/ # User suggestions
+│   │   ├── Post/          # Post components
+│   │   └── ...            # Other components
+│   ├── pages/             # Main views
+│   │   ├── Auth/          # Login/Register
+│   │   ├── Feed/          # Main feed
+│   │   └── Profile/       # User profile
+│   ├── api.js             # API paths
+│   ├── App.jsx            # Main App
+│   └── main.jsx           # Entry point
+├── public/                # Static files
+├── .env                   # Environment variables
+└── package.json
+```
+
+## 🔌 API Integration
+All API calls are handled through Axios in `src/services/api.js`:
+```javascript
+// Example API call
+export const getPosts = async () => {
+  return await axios.get(`${import.meta.env.VITE_API_BASE_URL}/api/posts`);
+};
+```
+
+## 📱 Responsiveness
+- Mobile (≤ 640px)
+- Tablet (≤ 768px)
+- Desktop (≥ 1024px)
+
+## 📬 Contact
+- **Email**: [sksk5198222@gmail.com](mailto:sksk5198222@gmail.com)
+- **GitHub**: [@sk5198222](https://github.com/sk5198222)
+- **LinkedIn**: [devsathyam](https://www.linkedin.com/in/devsathyam/)
